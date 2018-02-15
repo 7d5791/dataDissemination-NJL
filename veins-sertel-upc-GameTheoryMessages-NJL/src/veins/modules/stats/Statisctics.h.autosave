@@ -1,0 +1,21 @@
+#ifndef STATISTICS_H
+#define STATISTICS_H
+
+class Statisctics : public cSimpleModule
+{
+protected:
+    
+};
+
+class StatisticsAccess
+{
+	public:
+		StatisticsAccess() {
+		}
+
+		Statistics* getIfExists() {
+			return dynamic_cast<Statistics*>(simulation.getModuleByPath("obstacles"));
+		}
+};
+
+#endif // STATISTICS_H
